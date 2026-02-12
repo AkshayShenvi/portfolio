@@ -1,5 +1,5 @@
 import "./App.css";
-import { Card, CardContent, CardHeader, CardTitle } from "./components/ui/card";
+import { Timeline, TimelineItem } from "./components/ui/timeline";
 
 function App() {
   return (
@@ -38,80 +38,53 @@ function App() {
 
         <section id="experience" className="mb-12">
           <h2 className="text-3xl font-semibold mb-6">Experience</h2>
-          <div className="space-y-6">
-            <Card>
-              <CardHeader>
-                <CardTitle>Software Engineer 2 @ Expedia Group</CardTitle>
-                <p className="text-sm text-muted-foreground">
-                  May 2022 - Present | Austin, TX
-                </p>
-              </CardHeader>
-              <CardContent>
-                <p>
-                  Software Engineer 2 at Expedia Group, building scalable,
-                  high-performance Identity travel technology that helps
-                  millions of travelers log in to Expedia and find their perfect
-                  trip. I work across the full development lifecycle—from
-                  architecture and coding to deployment and
-                  optimization—focusing on reliability, clean design, and
-                  measurable impact. Passionate about solving complex problems,
-                  collaborating across teams, and continually improving user
-                  experiences through thoughtful engineering.
-                </p>
-              </CardContent>
-            </Card>
+          <Timeline>
+            <TimelineItem
+              date="May 2022 - Present"
+              title="Software Engineer 2"
+              subtitle="Expedia Group | Austin, TX"
+            >
+              Software Engineer 2 at Expedia Group, building scalable,
+              high-performance Identity travel technology that helps millions of
+              travelers log in to Expedia and find their perfect trip. I work
+              across the full development lifecycle—from architecture and coding
+              to deployment and optimization—focusing on reliability, clean
+              design, and measurable impact. Passionate about solving complex
+              problems, collaborating across teams, and continually improving
+              user experiences through thoughtful engineering.
+            </TimelineItem>
 
-            <Card>
-              <CardHeader>
-                <CardTitle>Software Engineer @ AM RE Syndicate Inc</CardTitle>
-                <p className="text-sm text-muted-foreground">
-                  Nov 2020 - May 2022 | Dallas, TX
-                </p>
-              </CardHeader>
-              <CardContent>
-                <p>Worked as a Software Engineer at AM RE Syndicate Inc.</p>
-              </CardContent>
-            </Card>
+            <TimelineItem
+              date="Nov 2020 - May 2022"
+              title="Software Engineer"
+              subtitle="AM RE Syndicate Inc | Dallas, TX"
+            >
+              Worked as a Software Engineer at AM RE Syndicate Inc.
+            </TimelineItem>
 
-            <Card>
-              <CardHeader>
-                <CardTitle>
-                  Full Stack Engineer @ The University of Texas at Arlington
-                </CardTitle>
-                <p className="text-sm text-muted-foreground">
-                  Sept 2020 - Nov 2020
-                </p>
-              </CardHeader>
-              <CardContent>
-                <p>
-                  Creating an open-source framework to Annotate hand signs in
-                  video streaming data.
-                </p>
-              </CardContent>
-            </Card>
+            <TimelineItem
+              date="Sept 2020 - Nov 2020"
+              title="Full Stack Engineer"
+              subtitle="The University of Texas at Arlington"
+            >
+              Creating an open-source framework to Annotate hand signs in video
+              streaming data.
+            </TimelineItem>
 
-            <Card>
-              <CardHeader>
-                <CardTitle>
-                  Machine Learning Intern @ Digital Reasoning
-                </CardTitle>
-                <p className="text-sm text-muted-foreground">
-                  June 2020 - Sept 2020 | Franklin, TN
-                </p>
-              </CardHeader>
-              <CardContent>
-                <p>
-                  Researching and Developing an End-to-End(E2E) multi-language
-                  text transcription model on SEAME Audio data using NLP and
-                  Machine Learning concepts. Modeled data by cutting out chunks
-                  of audio transcripts and use it to experiment
-                  sequence-to-sequence model. Data collection and modeling for
-                  poems recommendation system. Performed N-gram modeling, data
-                  analysis & visualization for a single author.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
+            <TimelineItem
+              date="June 2020 - Sept 2020"
+              title="Machine Learning Intern"
+              subtitle="Digital Reasoning | Franklin, TN"
+            >
+              Researching and Developing an End-to-End(E2E) multi-language text
+              transcription model on SEAME Audio data using NLP and Machine
+              Learning concepts. Modeled data by cutting out chunks of audio
+              transcripts and use it to experiment sequence-to-sequence model.
+              Data collection and modeling for poems recommendation system.
+              Performed N-gram modeling, data analysis & visualization for a
+              single author.
+            </TimelineItem>
+          </Timeline>
         </section>
 
         <section id="contact">
