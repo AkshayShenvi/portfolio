@@ -26,7 +26,7 @@ const TimelineItem = React.forwardRef<HTMLDivElement, TimelineItemProps>(
       {/* Timeline line and dot */}
       <div className="flex flex-col items-center mr-4">
         <div className="w-3 h-3 bg-primary rounded-full border-2 border-background"></div>
-        <div className="w-0.5 h-full bg-border mt-2"></div>
+        <div className="w-0.5 h-8 bg-border mt-2"></div>
       </div>
 
       {/* Content */}
