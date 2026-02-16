@@ -23,20 +23,22 @@ const TimelineItem = React.forwardRef<HTMLDivElement, TimelineItemProps>(
       className={cn("relative flex items-start", className)}
       {...props}
     >
-      {/* Timeline line and dot */}
-      <div className="flex flex-col items-center mr-4">
-        <div className="w-3 h-3 bg-primary rounded-full border-2 border-background"></div>
-        <div className="w-0.5 h-8 bg-border mt-2"></div>
+      {/* Date on the left */}
+      <div className="w-36 pr-4 text-right shrink-0">
+        {date && (
+          <p className="text-sm font-mono text-muted-foreground">{date}</p>
+        )}
       </div>
 
-      {/* Content */}
+      {/* Timeline line and dot */}
+      <div className="flex flex-col items-center mx-4">
+        <div className="w-3 h-3 bg-primary rounded-full border-2 border-background shadow-[0_0_8px_hsl(142_71%_45%/0.4)]"></div>
+        <div className="w-0.5 h-8 bg-border/50 mt-2"></div>
+      </div>
+
+      {/* Content on the right */}
       <div className="flex-1 pb-8">
-        {date && <p className="text-sm text-muted-foreground mb-1">{date}</p>}
-        {title && <h3 className="text-lg font-semibold mb-1">{title}</h3>}
-        {subtitle && (
-          <p className="text-sm text-muted-foreground mb-2">{subtitle}</p>
-        )}
-        <div className="text-sm text-muted-foreground">{children}</div>
+        <div className="text-sm">{children}</div>
       </div>
     </div>
   ),
