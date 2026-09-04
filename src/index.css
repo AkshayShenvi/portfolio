@@ -4,48 +4,50 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --background: 0 0% 4%;
-    --foreground: 0 0% 90%;
-    --card: 0 0% 7%;
-    --card-foreground: 0 0% 90%;
-    --popover: 0 0% 7%;
-    --popover-foreground: 0 0% 90%;
-    --primary: 142 71% 45%;
-    --primary-foreground: 0 0% 4%;
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 90%;
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 55%;
-    --accent: 0 0% 12%;
-    --accent-foreground: 0 0% 90%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 90%;
-    --border: 0 0% 15%;
-    --input: 0 0% 15%;
-    --ring: 142 71% 45%;
-    --radius: 0.5rem;
-  }
+:root {
+  --color-bg: #161826;
+  --color-text: #e9e9ed;
+  --color-accent: #9184d9;
+  --color-accent-300: #b9b1ec;
+  --color-neutral-400: #8b8ba0;
+  --color-neutral-500: #5b5b74;
+  --color-neutral-700: #2c2e42;
 }
 
-@layer base {
-  * {
-    border-color: hsl(var(--border));
-  }
-
-  body {
-    background-color: hsl(var(--background));
-    color: hsl(var(--foreground));
-    font-family: "Inter", sans-serif;
-  }
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: var(--color-bg);
 }
 
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+* {
+  box-sizing: border-box;
 }
 
-.animate-blink {
-  animation: blink 1s step-end infinite;
+@keyframes term-blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
 }
+
+@keyframes term-fade {
+  from { opacity: 0; transform: translateY(2px); }
+  to { opacity: 1; transform: none; }
+}
+
+.term-screen::-webkit-scrollbar { width: 10px; }
+.term-screen::-webkit-scrollbar-track { background: transparent; }
+.term-screen::-webkit-scrollbar-thumb {
+  background: var(--color-neutral-700);
+  border-radius: 8px;
+  border: 2px solid var(--color-bg);
+}
+.term-screen a { text-decoration: none; }
+.term-screen a:hover { text-decoration: underline; }
+
+.term-suggest {
+  cursor: pointer;
+  color: var(--color-neutral-400);
+  border-bottom: 1px dashed color-mix(in oklab, var(--color-accent) 40%, transparent);
+}
+.term-suggest:hover { color: var(--color-accent-300); }
